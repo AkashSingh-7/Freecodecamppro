@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Product Landing Page</title>
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<style type="text/css">
+		body{
+			margin: 0;
+			line-height: 25px;
+		}
+
+		.header-right img{
+			max-width: 100%;
+			margin-top: 70px;
+		}
+		.pricing img{
+			max-width: 100%;
+		}
+
+		section h2{
+			text-align: center;
+		}
+
+		.btn{
+			border-radius: 5px;
+			background-color: #e6a3d6;
+			box-shadow: 3px 3px 3px #9a297f;
+			color: white;
+			padding: 10px;
+			text-decoration: none;
+			display: inline-block;
+
+		}
+		.btn:hover {
+			box-shadow: 0 0 0 #9a297f;
+			transform: translate(2px, 2px);
+		}
+
+		.btn-price{
+			border-radius: 5px;
+			background-color: #f5b999;
+			box-shadow: 3px 3px 3px #b54a11;
+			color: white;
+			padding: 10px;
+			text-decoration: none;
+			display: inline-block;
+
+		}
+		.btn-price:hover {
+			box-shadow: 0 0 0 #b54a11;
+			transform: translate(2px, 2px);
+		}
+
+		/*navbar*/
+		nav{
+			background-color: #e6a3d6;
+			display: flex;
+			justify-content: center;
+			padding: 18px;
+			position: fixed;
+  			/*top: 0;*/
+  			width: 100%;
+  			z-index: 1;
+		}
+		.nav-link{
+			color: white;
+			text-decoration: none;
+			margin: 0 15px;
+		}
+		.container{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		.header-left{
+			width: 30%;
+			margin-top: 20px;
+		}
+		.header-right{
+			width: 70%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		
+
+		.features{
+			width: 28%;
+			padding: 10px;
+			border-radius: 10px;
+			margin: 20px 1.66%;
+			text-align: center;
+			box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+			position: relative;
+			background-color: #f5b999;
+			color: white;
+		}
+		.features:hover{
+			transform: translate3d(0px, 20px, 20px);
+		}
+		.features h2{
+			font-size: 20px;
+		}
+		.features p{
+			font-size: 16px;
+			line-height: 25px;
+		}
+		.features i{
+			margin-top: 5px;
+			font-size: 30px;
+		}
+		.features i:hover{
+			font-size: 40px;
+		}
+
+		/*pricing*/
+		.pricing{
+			width: 25%;
+			padding: 8px;
+			border-radius: 10px;
+			margin: 20px 1.66%;
+			text-align: center;
+			box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+			position: relative;
+			background-color: #e6a3d6;
+			color: white;
+			max-height: 100%;
+		}
+		.pricing:hover{
+			margin: 20px 4%;
+		}
+
+		/*form element*/
+		#email{
+			width: 45%;
+			padding: 5px;
+		}
+
+		#submit{
+			border-radius: 5px;
+			background-color: #e6a3d6;
+			box-shadow: 3px 3px 3px #9a297f;
+			color: white;
+			padding: 8px;
+			display: inline-block;
+		}
+		#submit:hover {
+			box-shadow: 0 0 0 #9a297f;
+			transform: translate(2px, 2px);
+		}
+
+		/*Footer*/
+		footer{
+			/*margin-top: 15%;*/
+			background: #021428;
+			width: 100%;
+			height: 15%;
+			max-height: 300px;
+			color: white;
+		}
+		.menu{
+			font-size: 20px;
+		}
+		.menu a.main-nav-item:hover{
+        	font-size: 30px;
+        	color: red;;
+    	}
+
+		p#footer-text{
+			line-height: 4;
+			text-align: center;
+		}
+
+		.heart{
+			color:#e25555;
+		}
+		.span{
+			text-align: center;
+		}
+
+		/*media query*/
+		@media (max-width: 760px){
+			.header-left, .header-right{
+				width: 100%;
+			}
+			.header-right{
+				order: 0;
+			}
+			.header-left{
+				order: 1;
+			}
+			.header-left h1{
+				display: none;
+				text-align: center;
+			}
+		}
+		@media (max-width: 600px){
+			.features, .pricing {
+				width: 60%;
+				padding: 15px;
+			}
+		}
+		@media (max-width: 420px){
+			.features, .pricing {
+				width: 80%;
+				padding: 15px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<section id="about">	
+		<header id="header">
+			<nav id="nav-bar">
+				<a href="#about" class="nav-link">About</a>
+				<a href="#features" class="nav-link">Features</a>
+				<a href="#video" class="nav-link">Video</a>
+				<a href="#pricing" class="nav-link">Pricing</a>
+			</nav>
+
+			<div class="container">
+
+				<div class="header-left">
+					<h1>Smart Watches</h1>
+						<p>Buy Latest Smart Watches Online from best brands at discounted prices in India. Get attractive deals on smart watches. Shop NOW!</p>
+
+						<a class="btn" href="https://www.amazon.in/b/ref=QAQuad11CTA_en_IN_2?pf_rd_r=89T0P50FPGVA04WQ6PS4&pf_rd_p=68661d5b-316d-4865-8e6c-602824681e5f&pf_rd_m=A1VBAL9TL5WCBF&pf_rd_s=merchandised-search-4&pf_rd_t=&pf_rd_i=2563504031&node=17143854031" target="_blank">Buy Now</a>
+				
+				</div>
+
+				<div class="header-right">
+					<img id="header-img" src="https://m.media-amazon.com/images/G/31/img20/Watches/May/Banners-New/MW-Eng-PC._SX3000_QL85_.jpg">
+				</div>
+
+			</div>
+
+		</header>
+	</section>
+
+
+	<!-- Features -->
+	<section id="features">
+		<h2>Features</h2>
+		<div class="container">
+			<div class="features">
+				<i class="fa fa-heart" style="color: red;"></i>
+				<h2>
+					Heart Rate Tracking 
+				</h2>
+				<p>
+					From running to yoga (and more), this smartwatch measures heart rate automatically during a workout. 
+				</p>
+			</div>
+
+			<div class="features">
+				<i class="fa fa-clock-o" style="color: gray;"></i>
+				<h2>
+					Customizable Dials 
+				</h2>
+				<p>
+					Swap your dial to match your mood or personalize select watch faces with your favorite Facebook or Instagram photos. 
+				</p>
+			</div>
+
+			<div class="features">
+				<i class="fa fa-map" style="color: green;"></i>
+				<h2>
+					Untethered GPS 
+				</h2>
+				<p>
+					Leave your phone behind. Use untethered GPS to track your run's distance (and play your stored music) on your watch.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- video -->
+	<section>
+		<h2>Video</h2>
+		<div class="container">
+			<iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/lopc2LJnupQ?start=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</section>
+
+	<!-- pricing -->
+	<section id="pricing">
+		<h2>Pricing</h2>
+		<div class="container">
+			<div class="pricing">
+				<img src="w3.jpg">
+  				<strike>9,995</strike>17,995
+  				<a class="btn-price" href="https://www.amazon.in/Fossil-Sport-Digital-Womens-Watch-FTW6025/dp/B07HBNZGND/ref=lp_17143854031_1_3?s=watches&ie=UTF8&qid=1591427680&sr=1-3" target="_blank">Add to cart</a>
+			</div>
+
+			<div class="pricing">
+				<img style="margin-top: 10px;" src="w2.jpg">
+  				<strike>9,995</strike>17,995
+				<a class="btn-price" href="https://www.amazon.in/Fossil-Sport-Digital-Womens-Watch-FTW6024/dp/B07HBDTYHK/ref=lp_17143854031_1_2?s=watches&ie=UTF8&qid=1591427680&sr=1-2" target="_blank">Add to cart</a>
+			</div>
+
+			<div class="pricing">
+				<img style="margin-top: 10px;" src="w1.jpg">
+   				<strike>9,995</strike>17,995
+				<a class="btn-price" href="https://www.amazon.in/Fossil-Sport-Digital-Black-Watch-FTW4021/dp/B07HBDXTYX/ref=lp_17143854031_1_1?s=watches&ie=UTF8&qid=1591427680&sr=1-1" target="_blank">Add to cart</a>
+			</div>
+		</div>
+	</section>
+
+	<div class="container">
+		<form id="form" action=" https://www.freecodecamp.com/email-submit" style="margin-top: 10px;">
+			<label>Email: </label>
+			<input id="email" type="email" name="email" placeholder="Enter your e-mail">
+			<input id="submit" type="submit" value="Subscribe">
+		</form>
+	</div>
+
+	<footer>
+	
+	<p id="footer-text">Copyright &copy; Logan_047</p>
+	<p class="span">Made with <span class="heart">❤</span> by Logan_047</p>
+
+	<div class="menu" style="text-align: center; padding-bottom: 20px;">
+        <a class="main-nav-item" href="https://www.instagram.com/akashsingh_31/" target="_blank"><i class="fa fa-instagram"></i></a>
+
+        <a class="main-nav-item" href="https://twitter.com/047_Logan" target="_blank"><i class="fa fa-twitter"></i></a>
+
+        <a class="main-nav-item" href="https://www.linkedin.com/in/akash-singh-b7a5ab154/" target="_blank"><i class="fa fa-linkedin"></i></a>
+
+        <a class="main-nav-item" href="https://www.facebook.com/profile.php?id=100018017593174" target="_blank"><i class="fa fa-facebook"></i></a>
+
+        <a class="main-nav-item" href="https://github.com/AkashSingh-7" target="_blank"><i class="fa fa-github"></i></a>
+    </div>
+
+</footer>
+
+	<script type="text/javascript" src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>

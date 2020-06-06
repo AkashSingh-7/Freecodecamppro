@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nav bar</title>
+	<style type="text/css">
+		/*responive background image*/
+		/*html{
+			background-image: url(bgm.jpg);
+			height: 100%;
+			background-size: cover;
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-color: #464646;
+		}*/
+		#nav-bar{
+			display: flex;
+			justify-content: center; 
+		}
+		a{
+			text-decoration: none;
+			padding: 20px;
+		}
+	</style>
+</head>
+<body>
+	<nav id="nav-bar">
+		<a class="nav-link" id="about" href="#about">About</a>
+		<a class="nav-link" id="books" href="#books">Books</a>
+		<a class="nav-link" id="contact" href="#contact">Contact</a>
+	</nav>
+
+	<script type="text/javascript">
+		background(148, 251, 255); // RGB
+
+		// face
+		fill(255, 255, 0);
+		ellipse(202, 208, 300, 300);
+
+		// eyes
+		fill(0, 0, 0);
+		ellipse(157, 151, 40, 40);
+		ellipse(304, 142, 40, 40);
+
+		// mouth
+		fill(255, 0, 0);
+		ellipse(257, 240, 120, 136);
+
+		// headband
+		strokeWeight(33);
+		stroke(250, 0, 242);
+		line(83, 116, 271, 74);
+	</script>
+</body>
+</html>
