@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Portfolio</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,700;1,400&family=Sriracha&display=swap');
+		*{
+		  box-sizing: border-box;
+		}
+		body{
+		  margin: 0;
+		  color: white;
+		}
+
+		nav{
+		  background-color: #A1636C;
+		  display: flex;
+		  justify-content: flex-end;
+		  padding: 20px;
+		  position: fixed;
+		  top: 0;
+		  left: 0;
+		  right: 0;
+		  z-index: 10;
+		}
+		nav a{
+		  margin-left: 30px;
+		  text-decoration: none;
+		  color: #fff;
+		  position: relative;
+		}
+		nav a::after{
+			content: '';
+			border-bottom: 3px solid #fff;
+			position: absolute;
+			top: 0;
+			left: 0;
+			transform: translateY(10px);
+			transition: transform 0.3s ease;
+			opacity: 0;
+			height: 100%;
+			width: 100%;
+		}
+		nav a:hover::after{
+			opacity: 1;
+			transform: translateY(0);
+		}
+
+		header{
+		  height: 100vh;
+		  display: flex;
+		  background-color: #1E1C27;
+		  flex-direction: column;
+		  justify-content: center;
+		  align-items: center;
+		  font-family: 'Bellota', cursive;
+		}
+		header h1{
+		  font-size: 60px;
+		  margin: 0;
+		  margin-bottom: 5px;
+		}
+		header p{
+		  margin: 0;
+		  font-size: 40px;
+		}
+		header img{
+			max-width: 100%;
+			border-radius: 50%;
+		}
+		.head-img{
+			width: 140px;
+
+		}
+
+		section{
+		  text-align: center;
+		  padding: 30px;
+		}
+		section p{
+		  font-size: 18px;
+		}
+		.sec-color{
+		  background-color: #d0b1b5;
+		}
+		.social-ul{
+		  list-style-type: none;
+		  display: flex;
+		  justify-content: center;
+		  padding: 0;
+		  margin: 0;
+		}
+		.social-ul a{
+			border-radius: 50%;
+			border: 2px solid white;
+			font-size: 30px;
+			margin: 0 10px;
+			width: 50px;
+			height: 50px;
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			text-decoration: none;
+		}
+		.social-hover{
+			transition: transform 0.3s ease;
+		}
+		.social-hover:hover{
+			transform: scale(1.1);
+		}
+
+		.project-container{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+		}
+		.project-container a{
+			text-decoration: none;
+		}
+
+		.project{
+			color: black;
+			max-width: 300px;
+			margin: 10px;
+			transition: transform 0.3s ease;
+		}
+		.project:hover{
+			transform: scale(1.1);
+		}
+		.project p{
+			font-size: 20px;
+		}
+		.project img{
+			max-width: 100%;
+			margin: 0 10px;
+		}
+
+		@media (max-width: 559px){
+			header p{
+				font-size: 30px;
+				margin: 0;
+			}
+			header h1{
+				font-size: 50px;
+		  		margin: 0;
+		  		margin-bottom: 5px;
+			}
+		}
+		@media (max-width: 419px){
+			header p{
+				font-size: 20px;
+				margin: 0;
+			}
+			header h1{
+				font-size: 40px;
+		  		margin: 0;
+		  		margin-bottom: 5px;
+			}
+		}
+
+		footer{
+		  background-color: #A1636C;
+		  padding: 10px;
+		  text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+	<nav id="navbar">
+		<a href="#welcome-section">About</a>
+		<a href="#projects">Projects</a>
+		<a href="#contact">Contact</a>
+	</nav>
+
+	<header id="welcome-section">
+		<div class="head-img">
+			<img src="img1.png">
+		</div>
+		<h1>Hello! 👋️</h1>
+		<p>My name is Akash Singh</p>
+		<p>I am learning web devlopment.</p>
+		
+	</header>
+
+	<section id="projects">
+		<h2 style="color: black;">Projects</h2>
+		<div class="project-container">
+
+			<a href="https://akashsingh-7.github.io/Freecodecamppro/SurveyForm/survey.html" target="_blank"><div class="project"><img src="surveyForm.png" alt="surveyForm"><p class="project-tile">Survey Form</p></div></a>
+
+			<a href="https://akashsingh-7.github.io/Freecodecamppro/ProductLandingPage/landing.html" target="_blank"><div class="project"><img src="product_page.png" alt="product_page"><p class="project-tile">Product Landing Page</p></div></a>
+
+			<a href="https://akashsingh-7.github.io/100Dayofcode/index.html"><div class="project" target="_blank"><img src="100daycode.png" alt="100daycode"><p class="project-tile">100 Days of Code</p></div></a>
+
+		</div>
+	</section>
+
+	<section id="contact" class="sec-color">
+		<h2>Social Links</h2>
+		<p>You can find me on 👇️</p>
+		<ul class="social-ul">
+			<li class="social-hover">
+				<a id="profile-link" href="https://twitter.com/047_Logan" target="_blank" style="color:skyblue;"><i class="fa fa-twitter"></i>
+				</a>
+			</li>
+			
+			<li class="social-hover">
+				<a id="profile-link" href="https://www.instagram.com/akashsingh_31/" target="_blank" style="color:red;"><i class="fa fa-instagram"></i>
+				</a>
+			</li>
+			
+			<li class="social-hover">
+				<a id="profile-link" href="https://www.linkedin.com/in/akash-singh-b7a5ab154/" target="_blank" style="color:blue;"><i class="fa fa-linkedin"></i>
+				</a>
+			</li>
+			
+			<li class="social-hover">
+				<a href="https://www.facebook.com/profile.php?id=100018017593174" target="_blank" style="color:blue;"><i class="fa fa-facebook"></i>
+				</a>
+			</li>
+			<li class="social-hover">
+				<a href="https://github.com/AkashSingh-7" target="_blank" style="color:black;"><i class="fa fa-github"></i>
+				</a>
+			</li>
+		</ul>
+	</section>
+
+	<footer>
+		Made with 💙️ by Akash Singh
+	</footer>
+
+
+	<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
